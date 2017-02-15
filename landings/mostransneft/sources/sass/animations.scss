@@ -1,0 +1,84 @@
+// @import "compass/css3/animation";
+
+// === plane
+// transform: translate(-260px,40px) scale(0) translateZ(0);
+// transition: 14s ease-in;
+// transform: translate(1320px,-145px) scale(2.4) translateZ(0);
+
+@keyframes plane {
+	0% {
+		transform: translate(-260px,40px) scale(0) translateZ(0);
+	}
+	80% {
+		transform: translate(1320px,-145px) scale(2.4) translateZ(0);
+	}
+	100% {
+		transform: translate(1320px,-145px) scale(2.4) translateZ(0);
+	}
+}
+@keyframes car1 {
+	0% {
+		transform: translate(-1000px,0) translateZ(0);
+	}
+	80% {
+		transform: translate(1560px,0) translateZ(0);
+	}
+	100% {
+		transform: translate(1560px,0) translateZ(0);
+	}
+}
+@keyframes car2 {
+	0% {
+		transform: translate(-1000px,0) translateZ(0);
+	}
+	80% {
+		transform: translate(1000px,0) translateZ(0);
+	}
+	100% {
+		transform: translate(1000px,0) translateZ(0);
+	}
+}
+
+@keyframes baloon {
+	0% {
+		transform: rotate(37deg) translate(100px,100px);
+	}
+	80% {
+		transform: rotate(-45deg) translate(0,-100px);
+	}
+	100% {
+		transform: rotate(-45deg) translate(0,-100px);
+	}
+}
+@keyframes baloon2 {
+	0% {
+		transform: rotate(-37deg);
+	}
+	80% {
+		transform: rotate(45deg);
+	}
+	100% {
+		transform: rotate(45deg);
+	}
+}
+
+.main {
+	.plane {
+		animation: plane 16s ease-in infinite;
+	}
+	.car1 {
+		transform: translate(-1000px,0) translateZ(0);
+		animation: car1 15s linear 4s infinite;
+	}
+	.car2 {
+		animation: car2 20s linear infinite;
+	}
+
+	.baloon {
+		transform-origin: 300px -150px;
+		animation: baloon2 15s linear infinite;
+	}
+	.baloon-inner {
+		animation: baloon 15s linear infinite;
+	}
+}

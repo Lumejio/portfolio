@@ -1,0 +1,67 @@
+input {
+	background: none;
+	border: none;
+	outline: none;
+	padding: 0;
+	@include input-placeholder {
+		color: black;
+	}
+}
+
+.popup-form {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	z-index: 300;
+
+	@include display-flex;
+	@include flex-direction(column);
+	@include justify-content(center);
+
+	// display: none;
+	opacity: 0;
+
+	.background {
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+		background: white;
+		z-index: 20;
+	}
+	.input-line {
+		position: relative;
+		z-index: 40;
+	}
+}
+
+.input-line {
+	@extend .grid;
+	position: relative;
+	font-size: 0;
+	&.input-line-inline {
+		padding: 0;
+	}
+}
+.input-line-active {
+	position: absolute;
+	bottom: 0; left: 0;
+	width: 320px; height: 2px;
+	margin-left: 20px;
+	background: black;
+	.input-line-inline & {
+		margin-left: 0;
+	}
+}
+.form-button,
+input[type="text"] {
+	width: 320px; height: 40px;
+	border-bottom: 2px solid $green;
+	text-align: center;
+	vertical-align: top;
+}
+.form-button {
+	line-height: 40px;
+}
+input[type="text"] {
+	font: 300 18px FiraSans, sans-serif;
+}

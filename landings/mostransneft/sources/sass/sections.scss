@@ -1,0 +1,934 @@
+/* ================= */
+/* = Section: Main = */
+/* ================= */
+
+section.main {}
+.main-above {
+	position: relative;
+	height: 88vh;
+	min-height: 675px;
+	max-height: 759px;
+	// yeah, that's difficult ;)
+
+	@include display-flex;
+	@include flex-direction(column);
+	@include justify-content(flex-end);
+
+	& > *:not(.background) {
+			position: relative;
+		z-index: 50;
+	}
+	& > *:last-child {
+		// margin-bottom: 58px;
+		width: 270px;
+	    margin: 45px auto 58px;
+	}
+
+	.background {
+		position: absolute;
+		width: 100%; height: 100%;
+		bottom: 0; left: 0;
+		font-size: 0;
+		svg, .baloon-inner {
+			position: absolute;
+		}
+		.floor, .sky {
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			svg, .baloon-inner {
+				bottom: 0; left: 50%;
+			}
+		}
+		.house {
+			margin-bottom: -2px;
+
+				stroke-dasharray: 50;
+				transition: 3s;
+		}
+
+		.sobor {
+			margin-left: -873px;
+		}
+		.ostankino {
+			margin-left: 502px;
+		}
+
+		.kremlin {
+			margin-left: -600px;
+		}
+		.mgu {
+			margin-left: 567px;
+		}
+
+		.tree {
+			&:first-child {
+				margin-left: -932px;
+			}
+			&:last-child {
+				margin-left: 461px;
+			}
+		}
+		.mercury {
+			margin-left: -725px;
+		}
+
+		.car1 {
+			margin-left: -561px;
+		}
+		.car2 {
+			margin-left: 146px;
+		}
+
+		// Sky
+
+		.cloud3:nth-child(1) {
+			margin-left: -860px;
+			margin-bottom: 401px;
+		}
+		.cloud3:nth-child(2) {
+			margin-left: 435px;
+			margin-bottom: 179px;
+		}
+		.cloud3:nth-child(3) {
+			margin-left: 780px;
+			margin-bottom: 192px;
+		}
+		.cloud2:nth-child(4) {
+			margin-left: -834px;
+			margin-bottom: 220px;
+		}
+		.cloud2:nth-child(5) {
+			margin-left: 592px;
+			margin-bottom: 232px;
+		}
+		.cloud1:nth-child(6) {
+			margin-left: -622px;
+			margin-bottom: 541px;
+		}
+		.cloud1:nth-child(7) {
+			margin-left: 351px;
+			margin-bottom: 640px;
+			width: 60px; height: 28px;
+		}
+		.cloud1:nth-child(8) {
+			margin-left: 767px;
+			margin-bottom: 495px;
+			width: 60px; height: 28px;
+		}
+		.baloon-inner {
+			margin-left: 554px;
+			margin-bottom: 521px;
+		}
+		.plane {
+			margin-left: -390px;
+			margin-bottom: 640px;
+		}
+	}
+}
+.main-below {
+	position: relative;
+	height: 223px;
+	border-top: 2px solid black;
+	z-index: 25;
+	.background {
+		position: absolute;
+		width: 100%; height: 100%;
+		top: 0; left: 0;
+		.stripe {
+			position: absolute;
+			top: 2px; left: 50%;
+			border-bottom: 2px solid black;
+			&.green1 {
+				border-color: #4ab19b;
+			}
+			&.green2 {
+				border-color: #43dfba;;
+			}
+		}
+	}
+}
+.main-float-text {
+	position: relative;
+	z-index: 30;
+	margin-top: 100px;
+	margin-left: 69px;
+}
+
+
+
+/* =========================== */
+/* = Section: Quick and safe = */
+/* =========================== */
+
+section.quick-and-safe {
+	padding-top: 45px;
+	.splash {
+		position: relative;
+		width: 100%; height: 363px;
+		margin-bottom: 296px; // -35
+	}
+}
+.fuel-list {
+	margin-top: 160px;
+	li {
+		display: block;
+		padding-bottom: 15px;
+	}
+	p {
+		padding-top: 15px;
+		text-transform: uppercase;
+	}
+}
+.splash-water {
+	width: 100%;
+	.water {
+		position: relative;
+		left: 50%;
+		// margin-left: -922px; // wtf that sucks
+		margin-top: -129px;
+		transform: translateX(-50%);
+	}
+}
+.dribbles-float-text {
+	position: absolute;
+	top: 318px;
+	margin-left: 69px;
+}
+
+
+
+/* ============================ */
+/* = Section: Autopark Header = */
+/* ============================ */
+
+section.autopark-header {
+	padding-bottom: 80px;
+}
+.autopark-features {
+	margin: 65px auto;
+	li {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 27px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	.image {
+		line-height: 115px;
+		img {
+			display: inline-block;
+			vertical-align: bottom;
+		}
+	}
+	p {
+		position: relative;
+		margin-top: 19px;
+		font-size: em(16);
+	}
+}
+
+
+
+/* =========================== */
+/* = Section: Autopark Items = */
+/* =========================== */
+
+section.autopark-item {
+	padding-bottom: 72px;
+	h2 {
+		font-size: em(120);
+	}
+
+	.top-images-container {
+		position: relative;
+		height: 553px;
+	    margin-top: 117px;
+	}
+	.auto-image {
+		position: absolute;
+		left: 50%;
+			margin-left: -720px;
+	}
+	.cover-image {
+		position: absolute;
+		left: 50%;
+			margin-left: 219px;
+			margin-top: 62px;
+	}
+
+	.driver-image {
+		position: relative;
+		width: 300px; height: 451px;
+		left: 50%;
+		margin-top: -273px;
+		margin-left: 275px;
+		mark {
+			position: absolute;
+			top: 297px; left: -145px;
+		}
+	}
+	.number-image {
+		position: relative;
+		width: 400px; height: 81px;
+		left: 50%; top: -48px;
+		margin-top: -81px;
+		margin-left: -469px;
+		mark {
+			position: absolute;
+			top: -12px; left: -43px;
+		}
+	}
+	.autopark-order {
+		margin-top: 124px;
+		margin-bottom: 266px;
+	}
+}
+.auto-card {
+	position: relative;
+	left: -29px;
+	width: 570px;
+	padding: 68px 0 64px;
+	margin: 0 auto;
+	background: white;
+	z-index: 20;
+	.car-volume {
+		font-size: em(16);
+		strong {
+			font-size: em(30,16);
+		}
+	}
+	.car-scheme {
+		position: relative;
+		height: 110px;
+		margin: 37px 0 41px;
+		&.volvo-scheme {
+			background: url(../images/autopark/sections0.png) top center no-repeat;
+		}
+		&.hyundai-scheme {
+			background: url(../images/autopark/sections1.png) top center no-repeat;
+		}
+	}
+	.car-scheme-litre {
+		position: absolute;
+		left: 50%; top: 33px;
+		margin-left: -111px;
+		p {
+			display: inline-block;
+		    width: 105px;
+			font-size: em(16);
+			font-weight: 500;
+		    text-align: left;
+		}
+	}
+	.car-subscript {
+		width: 290px;
+		margin: 0 auto;
+		text-align: left;
+		font-size: em(14);
+	}
+	.car-dimensions {
+		margin-top: 37px;
+		line-height: 38px;
+		span, img {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		span {
+			margin-left: 8px;
+			margin-right: 23px;
+			&:first-child {
+				margin-left: 0;
+				margin-right: 18px;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+
+
+/* =============================== */
+/* = Section: Autopark Show More = */
+/* =============================== */
+
+.autopark-show-more {
+	.autopark-item + & {
+		margin-top: -72px;
+	}
+	.button {
+		position: relative;
+		letter-spacing: 2px;
+		color: #4ab19b; // wtf
+		&::before, &::after {
+			content: "";
+			position: absolute;
+			top: 7px; left: 50%;
+			width: 110px;
+			border-bottom: 2px solid;
+		}
+		&::before {
+			margin-left: -329px;
+		}
+		&::after {
+			margin-left: 206px;
+		}
+	}
+}
+
+
+
+/* ========================== */
+/* = Section: Features List = */
+/* ========================== */
+
+section.any-time {
+	margin-top: 160px;
+	.background {
+		position: relative;
+		top: 43px;
+		height: 430px;
+		.image, svg {
+			position: absolute;
+			top: 0; left: 50%;
+		}
+
+		.orbit {
+			margin-left: -362px;
+		}
+		.earth {
+			margin-top: 147px;
+			margin-left: -79px;
+		}
+		.satelite {
+			margin-top: -56px;
+			margin-left: 125px;
+		}
+		.meter {
+			margin-top: 80px;
+			margin-left: -338px;
+		}
+		.tube {
+			margin-top: 259px;
+			margin-left: -400px;
+		}
+		.glonass {
+			margin-top: 321px;
+			margin-left: -180px;
+		}
+		.letter {
+			margin-top: 236px;
+			margin-left: 219px;
+		}
+	}
+}
+.features-list {
+	position: relative;
+	z-index: 10;
+	article {
+		display: inline-block;
+		vertical-align: top;
+		width: 257px;
+	    margin-right: 89px;
+		&:nth-of-type(2) {
+			position: relative;
+			left: 23px;
+		}
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+	h4 {
+		padding-bottom: 20px;
+	}
+	ul {
+		& > li {
+			display: block;
+			font-size: em(16);
+		}
+	}
+}
+.prices-float-text {
+	margin-top: 27px;
+	margin-left: 104px;
+}
+
+
+
+/* ======================= */
+/* = Section: Calculator = */
+/* ======================= */
+
+section.calculator {
+	padding-top: 157px;
+	.container {
+		position: relative;
+		margin-top: 90px;
+	}
+	.map {
+		height: 450px;
+		background: #dadada;
+	}
+}
+dl.calc-body {
+	width: 510px;
+	padding-top: 50px;
+	padding-bottom: 71px;
+	font-size: 0;
+	dt, dd {
+		display: inline-block;
+		vertical-align: top;
+		font-size: $base-font-size;
+	}
+	dt {
+		width: 242px;
+		padding-right: 25px;
+		p {}
+	}
+	dd {}
+	.separator {
+		width: 200px;
+		border-bottom: 1px solid #43dfba;
+		margin: 71px 0 62px;
+	}
+
+	.null {
+		padding-bottom: 22px;
+	}
+
+	select {}
+}
+.calc-select {
+	margin-top: -10px;
+	li {
+		position: relative;
+		display: table;
+		line-height: 1;
+		padding: 6px 13px;
+		margin-bottom: 2px;
+		border: 2px solid transparent;
+
+		cursor: pointer;
+		transition: .4s;
+		&:hover {
+			border-color: white;
+		}
+	}
+	.calc-watch-auto {
+		left: 183px; top: 14px;
+		position: absolute;
+	}
+}
+.calc-result {
+	position: absolute;
+	right: 0; top: 0;
+	width: 468px;
+	padding: 49px 0 29px;
+	background: white;
+	.lead {
+		margin-bottom: 42px;
+	}
+
+	.mid-width {
+		width: 86px;
+	}
+	.long-width {
+		width: 132px;
+	}
+
+	.result-title {
+		font-size: em(14);
+		margin-bottom: 6px;
+	}
+	output {
+		&.final {
+			display: block;
+			padding-top: 2px;
+			margin-bottom: 48px;
+			font-size: em(30);
+		}
+	}
+	.separator {
+		width: 102px;
+		border-bottom: 2px solid #43dfba;
+		margin: 34px auto 31px;
+	}
+
+	.button {
+		display: block;
+	}
+}
+.calc-float-text {
+	position: absolute;
+	top: 100%; left: 0;
+	margin-top: 38px;
+}
+
+
+
+/* ============================== */
+/* = Section: Price description = */
+/* ============================== */
+
+section.price-description {
+	padding-top: 130px;
+	padding-bottom: 170px;
+	.thread {
+		padding: 47px 0 20px;
+		article {
+			margin-right: 16px;
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+}
+.desc-float-text {
+	margin-top: 17px;
+	margin-left: 98px;
+}
+
+
+
+/* ========================== */
+/* = Section: Special Offer = */
+/* ========================== */
+
+section.special-offer {
+	padding-bottom: 190px;
+	.block {
+		margin-top: 108px;
+		margin-bottom: 20px;
+		& + .block {
+			margin-top: 215px;
+		}
+	}
+	.number {
+		margin-bottom: 33px;
+		font-size: em(120);
+		font-weight: 100;
+		line-height: 0.75;
+	}
+	.lead {
+		margin-bottom: 6px;
+	}
+	.percent {
+		margin: 14px 0 6px;
+		font-size: em(90);
+		font-weight: 500;
+		line-height: 0.75;
+	}
+}
+.special-dribbles {}
+.special-float-text {
+	margin: 99px 0 45px -339px;
+}
+
+
+
+/* ======================== */
+/* = Section: Obligations = */
+/* ======================== */
+
+section.obligation {
+	padding-top: 135px;
+}
+.ogligation-items {
+	padding-top: 45px;
+	padding-bottom: 80px;
+	article {
+		display: inline-block;
+		vertical-align: top;
+		width: 290px;
+		margin-right: 40px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+	.icon-block {
+		height: 157px;
+		margin-bottom: 42px;
+			text-align: center;
+		svg {
+			max-height: 154px;
+			max-width: 100%;
+		}
+	}
+}
+
+
+
+/* ====================== */
+/* = Section: Guarantee = */
+/* ====================== */
+
+section.guarantee {
+	padding-top: 62px;
+	padding-bottom: 100px;
+	.thread {
+		padding: 60px 0;
+		margin-bottom: 68px;
+		article {
+			margin-right: 20px;
+			margin-left: 5px;
+			&:nth-child(2n-1) {
+				min-width: 130px; // 134
+			}
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	.input-line {
+		margin-top: 56px;
+	}
+}
+.questions-text {}
+.guarantee-float-text {
+	margin-top: 59px;
+	margin-left: 20px;
+}
+
+
+
+/* ================== */
+/* = Section: Steps = */
+/* ================== */
+
+section.steps {
+	padding-top: 81px;
+}
+.steps-list {
+	padding: 118px 0 165px;
+	.icon-block {
+		position: absolute;
+		width: 148px; height: 148px;
+		left: 0; top: 0;
+		margin-left: -74px;
+		border: 5px solid #6edcd6;
+		border-radius: 50%;
+		overflow: hidden;
+		img {
+			position: absolute;
+			top: 50%; left: 50%;
+			@include transform(translate(-50%,-50%));
+		}
+	}
+	li {
+		display: block; // kinda fallback
+		@include display-flex;
+		@include flex-direction(column);
+		@include justify-content(center);
+
+		box-sizing: border-box;
+		position: relative;
+		width: 50%; height: 148px;
+		left: 50%;
+		padding-left: 129px;
+		margin-bottom: 120px;
+		line-height: 30/$base;
+		text-align: left;
+		&:nth-child(2n) {
+			padding-left: 0;
+			padding-right: 129px;
+			left: 0;
+			text-align: right;
+			.icon-block {
+				left: auto;
+				right: 0;
+				margin-right: -74px;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.button {
+		line-height: 30/$base;
+	}
+}
+
+
+
+/* ========================= */
+/* = Section: Testimonials = */
+/* ========================= */
+
+section.testimonials {
+	position: relative;
+	padding-top: 157px;
+	padding-bottom: 330px;
+	.background {
+		position: relative;
+		width: 100%; height: 0;
+		svg, .image {
+			position: absolute;
+			top: 0; left: 50%;
+		}
+	}
+	.clouds-layer {
+		.cloud3:nth-child(1) {
+			margin-top: 47px;
+			margin-left: 415px;
+		}
+		.cloud1:nth-child(2) {
+			margin-top: 86px;
+			margin-left: 282px;
+		}
+		.cloud3:nth-child(3) {
+			margin-top: 386px;
+			margin-left: -586px;
+		}
+		.cloud2:nth-child(4) {
+			margin-top: 609px;
+			margin-left: -209px;
+		}
+		.cloud2:nth-child(5) {
+			margin-top: 793px;
+			margin-left: 373px;
+		}
+		.cloud1:nth-child(6) {
+			margin-top: 999px;
+			margin-left: -660px;
+		}
+		.cloud1:nth-child(7) {
+			margin-top: 964px;
+			margin-left: 315px;
+		}
+		.cloud3:nth-child(8) {
+			margin-top: 1291px;
+			margin-left: -296px;
+		}
+		.cloud2:nth-child(9) {
+			margin-top: 1381px;
+			margin-left: 83px;
+		}
+	}
+	.elements-layer {
+		.path {
+			margin-top: 171px;
+			margin-left: 239px;
+		}
+		.xo {
+			margin-top: 380px;
+			margin-left: -215px;
+		}
+		.car {
+			margin-top: 628px;
+			margin-left: -523px;
+		}
+		.docs {
+			margin-top: 843px;
+			margin-left: 176px;
+		}
+		.barrel {
+			margin-top: 1154px;
+			margin-left: 284px;
+		}
+		.hands {
+			margin-top: 1405px;
+			margin-left: -216px;
+		}
+	}
+
+	.review {
+		position: relative;
+		left: 50%;
+		box-sizing: border-box;
+		padding: 0 56px;
+		background: white;
+		z-index: 20;
+		&.review-0 {
+			width: 713px; height: 250px;
+			line-height: 250px;
+			margin-top: 82px;
+				margin-bottom: 114px;
+				margin-left: -454px;
+		}
+		&.review-1 {
+			width: 425px; height: 347px;
+			line-height: 347px;
+				margin-bottom: 98px;
+				margin-left: -39px;
+		}
+		&.review-2 {
+			width: 564px; height: 323px;
+			line-height: 323px;
+				margin-left: -404px;
+		}
+
+		.name {
+			position: absolute;
+			top: 27px; left: -25px;
+			line-height: 0;
+		}
+		.text {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: em(16);
+			line-height: 1.2;
+		}
+	}
+}
+
+
+
+/* ===================== */
+/* = Section: Contacts = */
+/* ===================== */
+
+section.contacts {
+	padding-top: 96px;
+	padding-bottom: 32px;
+}
+.contacts-content {
+	font-size: em(14);
+	line-height: 24px;
+	padding-top: 63px;
+	.block {
+		width: 300px;
+		margin-right: 25px;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+	.solid, strong, .button {
+		font-size: em(18,14);
+	}
+	.solid {}
+	strong {}
+	.button {
+		text-transform: none;
+		font-weight: 300;
+	}
+
+	position: relative;
+	z-index: 100;
+}
+.contacts-float-text {
+	margin-top: 432px;
+	margin-left: -23px;
+
+	position: relative;
+	z-index: 100;
+}
+.contacts-map {
+	position: absolute;
+	left: 0; bottom: 0;
+	height: 610px; width: 100%;
+	.gradient-overlay {
+		position: absolute;
+		left: 0; top: -1px;
+		z-index: 50;
+
+		width: 100%; height: 290px;
+
+		@include background-image(linear-gradient(white, rgba(255,255,255,0) ));
+	}
+}

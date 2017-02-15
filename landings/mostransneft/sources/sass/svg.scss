@@ -1,0 +1,48 @@
+.car {
+	// filter: url('#blur');
+
+	fill: white;
+	.lines {
+		fill: black;
+	}
+}
+.cloud {
+	fill: url(#cloud-grad);
+}
+
+.orbit {
+	fill: none;
+	stroke: #69dbd4;
+	stroke-width: 62.7967;
+}
+
+.baloon {
+	fill: white;
+    stroke: black;
+    stroke-width: 42;
+}
+
+.sobor {
+	fill: #69dbd4;
+}
+.ostankino {
+	fill: none; // was 'white'
+	stroke: #43dfba;
+	stroke-width: 3.12046;
+	stroke-linecap:round;
+	stroke-linejoin:round;
+}
+
+.kremlin {
+    fill: none; // was 'white'
+	stroke: #4ab19b;
+	stroke-width: 1.22131;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.water {
+	fill: none;
+	stroke: black;
+	stroke-width: 223.736;
+}

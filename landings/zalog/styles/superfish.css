@@ -1,0 +1,87 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.sf-menu li {
+	position: relative;
+}
+.sf-menu ul {
+	position: absolute;
+	display: none; 
+	top: 100%;
+	left: 0;
+	z-index: 99;
+}
+.sf-menu > li {
+	float: left;
+}
+	section .sf-menu ul {
+		padding: 10px 20px 15px;
+		margin-top: 0px;
+		margin-left: -20px;
+		/*margin-right: 20px;*/
+
+		padding-top: 20px;
+	}
+	section .sf-menu ul ul {
+		margin-top: -20px;
+		padding-right: 5px;
+	}
+	section .sf-menu ul > li {
+		padding-right: 60px;
+		display: block;
+		line-height: 36px;
+	}
+	section .sf-menu ul > li > a {
+		font-size: 16px !important;
+		color: #010101;
+	}
+	section .sf-menu > li > ul > li ul li > a,
+	section .sf-menu > li > ul > li:hover ul li > a {
+		color: #989898;
+	}
+	section .sf-menu ul > li > a::after {
+		content: '\f061';
+		display: inline-block;
+		margin-left: 8px;
+		font-family: FontAwesome;
+		color: transparent;
+
+		transition: color .4s;
+	}
+	section .sf-menu ul > li:hover > a::after,
+	section .sf-menu ul > li:hover > a {
+		color: #fd6723;
+	}
+
+	.mobile-navigation ul ul ul {
+		top: 0px !important;
+	}
+.sf-menu li:hover > ul,
+.sf-menu li.sfHover > ul {
+	display: block;
+}
+
+.sf-menu a {
+	display: block;
+	position: relative;
+}
+.sf-menu ul ul {
+	top: 0;
+	left: 100%;
+
+}
+.sf-menu ul {
+	// background: white;
+}
+
+/*** DEMO SKIN ***/
+.sf-menu {
+	float: left;
+	margin-bottom: 1em;
+}
+.sf-menu li {
+	white-space: nowrap;
+}

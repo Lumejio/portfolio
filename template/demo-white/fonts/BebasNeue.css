@@ -1,0 +1,10 @@
+@font-face {
+	src: url(../fonts/Bebas-Regular.woff2) format('woff2'), url(../fonts/Bebas-Regular.woff) format('woff');
+	font-family: BebasNeue;
+	font-weight: 400;
+}
+@font-face {
+	src: url(../fonts/Bebas-Book.woff2) format('woff2'), url(../fonts/Bebas-Book.woff) format('woff');
+	font-family: BebasNeue;
+	font-weight: 300;
+}
